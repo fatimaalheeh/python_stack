@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML Table</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+
+    <table>
+        <tr>
+            <th>User</th>
+            <th>LastName</th>
+            <th>Firstname</th>
+            <th>Full name</th>
+            <th>Full name upper case</th>
+            <th>Length of full name</th>
+        </tr>
+
+
+        <tbody>
+            {% for i in range(user|length) %}
+
+            <tr>
+                <td>{{i+1}}</td>
+                <td>{{user[i]['first_name']}}</td>
+                <td>{{user[i]['last_name']}}</td>
+                <td> {{user[i]['first_name']}} {{user[i]['last_name']}}</td>
+                <td>{{user[i]['first_name']|upper}} {{user[i]['last_name']|upper}}</td>
+                <td>{{(user[i]["first_name"]|length) + (user[i]["last_name"]|length)}}</td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+
+
+    </table>
+</body>
+
+</html>
