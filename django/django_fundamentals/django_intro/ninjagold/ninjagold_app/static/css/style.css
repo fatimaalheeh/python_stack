@@ -1,0 +1,8 @@
+.show
+{
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 60px;
+    width: 390px;
+
+}

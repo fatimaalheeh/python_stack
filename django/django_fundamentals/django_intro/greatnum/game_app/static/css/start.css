@@ -1,0 +1,30 @@
+*
+{   margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body
+{
+    padding-top: 100px;
+}
+.green
+{
+    width: 200px;
+    height: 200px;
+    color: white;
+    padding: 90px 50px;
+    margin: 20px 0px;
+    background-color: green;
+
+}
+.red
+{
+    width: 200px;
+    height: 200px;
+    color: white;
+    padding: 90px 50px;
+    margin: 20px 0px;
+    background-color: red;
+
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center >
+        <section style="width: 500px;">
+            <h1>All the Users</h1>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Age</th>
+                </tr>
+                {%for i in Users%}
+                <tr>
+                    <td>{{id}}</td>
+                    <td>{{name}}</td>
+                    <td>{{email}}</td>
+                    <td>{{age}}</td>
+                </tr>
+                {%endfor%}
+            </table>
+            <hr>
+            <form action="add" method="POST">
+                <table>
+                    <tr>
+                        <td>First Name</td>
+                        <td><input type="text" name="first_name"></td>
+                        <td>last Name</td>
+                        <td><input type="text" name="last_name"></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><input type="text" name="first_name"></td>
+                        <td>Age </td>
+                        <td><input type="text" name="last_name"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><a href="">Add</a></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+    </center>
+</body>
+</html>

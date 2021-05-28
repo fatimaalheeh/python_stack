@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+   </head>
+<body>
+    <h1>Ninja Gold</h1>
+    <h3>Your Gold {{request.session.gold}}</h3>
+    <!-- Farm -->
+    <form action="/process_money" method="POST">
+        {%csrf_token%}
+        <h1>Farm</h1>
+        <input type="hidden" name="location" value="farm">
+        <input type="submit" value="Find Gold">
+    </form>
+    <!-- House -->
+    <form action="/process_money" method="POST">
+        {%csrf_token%}
+        <h1>House</h1>
+        <input type="hidden" name="location" value="house">
+        <input type="submit" value="Find Gold">
+    </form>
+    <!-- Cave -->
+    <form action="/process_money" method="POST">
+        {%csrf_token%}
+        <h1>Cave</h1>
+        <input type="hidden" name="location" value="cave">
+        <input type="submit" value="Find Gold">
+    </form>
+    <!-- casino -->
+    <form action="/process_money" method="POST">
+        {%csrf_token%}
+        <h1>Casino</h1>
+        <input type="hidden" name="location" value="casino">
+        <input type="submit" value="Find Gold">
+    </form>
+    <div class="show">
+        {%for someactivity in request.session.activities%}
+        <p>{{someactivity}}</p>
+
+        {%endfor%}
+    </div>
+
+</body>
+</html>

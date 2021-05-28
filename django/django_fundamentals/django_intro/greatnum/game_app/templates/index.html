@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/start.css' %}">    
+    
+</head>
+<body>
+    <center>
+        <br>
+        <br>
+        <br>
+        <h1>Welcome to the Great Number Game</h1>
+        <h2>I am thinking of a number between 1 and 100</h2>
+        <h3>Take a guess!</h3>
+        <div class="{{request.session.color}}">
+        
+            {{request.session.result}}
+            <form action="restart" method="POST">
+            {%csrf_token%}
+            <button name="restart" value="Restart" type="submit">Play again</button>
+
+        </form>
+        </div>
+        <form action="process" method="POST">
+            {%csrf_token%}
+            <input type="text" name='guess'>
+            <br>
+            <br>
+            <button name="process" value="Submit" type="submit">submit</button>
+            <br>
+            <br>
+        </form>
+        
+    </center>
+</body>
+</html>
